@@ -4,6 +4,6 @@ class GamesController < ApplicationController
     params[:answer]
   end
 
-  def result
+  def results
   end
 end

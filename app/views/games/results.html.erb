@@ -1,1 +1,14 @@
 <h1>New Game</h1>
+
+  <p><%= mots = params[:answer].split("") %></p>
+</div>
+<div>
+  <% mots.each do | mot | %>
+    <% params[:letters].split(" ").each do |letter| %>
+      <% if mot == letter %>
+        <p> True </p>
+      <% else %>
+        <p> False </p>
+      <% end %>
+    <% end %>
+  <% end %>

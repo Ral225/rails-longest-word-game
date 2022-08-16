@@ -5,23 +5,14 @@
     <% end %>
 </div>
 <div class = "userinput">
-  <form action="???" data-turbo="false">
+  <form action="results" data-turbo="false">
     <input type="text" name="answer">
     <input type="submit" value="Play!">
+    <%= hidden_field_tag 'letters', @letters %>
   </form>
   <div>
     <p><%= params[:answer] %></p>
-</div>
-  <p><%= mots = params[:answer].split("") %></p>
-</div>
-<div>
-  <% mots.each do | mot | %>
-    <% @letters.each do |letter| %>
-      <% if mot == letter %>
-        <p> True </p>
-      <% else %>
-        <p> False </p>
-      <% end %>
-    <% end %>
-  <% end %>
+  </div>
+
+
 </div>
