@@ -1,0 +1,27 @@
+<h1>New Game</h1>
+<div class = "letter">
+    <% @letters.each do |letter| %>
+    <p><%= letter.capitalize %></p>
+    <% end %>
+</div>
+<div class = "userinput">
+  <form action="???" data-turbo="false">
+    <input type="text" name="answer">
+    <input type="submit" value="Play!">
+  </form>
+  <div>
+    <p><%= params[:answer] %></p>
+</div>
+  <p><%= mots = params[:answer].split("") %></p>
+</div>
+<div>
+  <% mots.each do | mot | %>
+    <% @letters.each do |letter| %>
+      <% if mot == letter %>
+        <p> True </p>
+      <% else %>
+        <p> False </p>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
